@@ -5,22 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PÁGINA PESSOAL - Pessoal</title>
+
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
     <div class="container">
-        <head>
-            <div class="logo">
-                Logo
-            </div>
-            
-            <nav class="menu">
-                <ul>
-                    <li>HOME</li>
-                    <li>PESSOAL</li>
-                    <li>CONTATO</li>
-                  </ul>     
-            </nav>
-        </head>
+        <header id="header">
+            <!-- Carregado via JS -->
+        </header>
+
         <div class="content">
             <section class="sobre">
                 sobre mim
@@ -31,9 +25,15 @@
             </section>
         </div>
 
-        <footer>
-            Todos direitos reservados
-        </footer>
+        <footer id="footer">
+            <!-- Carregado via JS -->
+         </footer>
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        loadContentPessoal();
+    });
+</script>
