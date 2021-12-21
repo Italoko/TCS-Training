@@ -1,0 +1,80 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+*{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body{
+    color: #fff;
+    background:#1B1C1D;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+@media (min-width: 684px) {
+    .container {
+        max-width: 684px;
+    }
+}
+
+@media (min-width: 972px) {
+    .container {
+        max-width: 972px;
+    }
+}
+
+.content{
+    width: inherit;
+    text-align: center;
+}
+
+/*  Logo */
+.logo{
+    text-align: center;
+    width: 100%;
+}
+
+.logo > .code-icon > img{
+    width: 20%;
+}
+
+/*  Menu navegação */
+.menu {
+    padding: 0.5em;
+    margin: 8px;
+    width: 100%;
+}
+
+.menu > nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.menu > nav > ul> li> a:hover{
+    color: #008744;
+}
