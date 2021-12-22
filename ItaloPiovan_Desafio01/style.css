@@ -129,7 +129,7 @@ hr {
     display: flex;   
 }
 
-@media (min-width: 360px) {
+@media (max-width: 360px) {
     .sobre, .objetivos {
         height: 100vh;
         max-width: 360px;
@@ -137,7 +137,7 @@ hr {
     }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
     .sobre, .objetivos {
         height: 100vh;
         max-width: 320px;
@@ -145,10 +145,10 @@ hr {
     }
 }
 
-@media (min-width: 280px) {
+@media (max-width: 280px) {
     .sobre, .objetivos {
         height: 100vh;
-        max-width: 320px;
+        max-width: 280px;
         display: inline-block;
     }
 }
