@@ -20,6 +20,10 @@ a{
     text-decoration: none;
 }
 
+a:link {
+    color: inherit;
+}
+
 a:visited {
     color: inherit;
 }
@@ -76,5 +80,72 @@ li{
 }
 
 .menu > nav > ul> li> a:hover{
+    color: #008744;
+}
+
+/*  Forumulário de contato */
+.form-contact {
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: rgba(3, 8, 22, 0.1);
+}
+
+.form-contact div + div {
+    margin-top: 1em;
+}
+
+.form-contact label {
+    display: inline-block;
+}
+
+.form-contact input, textarea {
+    width: 100%;
+}
+
+.form-contact button{
+    background-color: #008744;
+    color: #fff;
+    font-size: 1.1em;
+    border-radius: 3px;
+    width:20%;
+    margin-top: 5px;
+    padding: 5px;
+    float: right;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #008744;
+    opacity: 15%;
+}
+
+/*  Sessão pessoal */
+.sobre, .objetivos{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sobre, .objetivos, p{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.social-media{
+    position: relative;
+    top: 25%;
+}
+
+.social-media p{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.social-media i{
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.social-media > a:hover{
     color: #008744;
 }
