@@ -1,3 +1,5 @@
+// -------------------- VIEW ------------------------
+
 function loadContentHome() {
     loadContentHeader();
     loadContentFooter();
@@ -36,8 +38,8 @@ function loadContentHeader(){
         <nav>
             <ul>
                 <li><a href="Home.html">HOME</a></li>
-                <li><a href="Pessoal.html">PESSOAL</a></li>
-                <li><a href="Contato.html">CONTATO</a></li>
+                <li><a href="Pessoal.html#sobre">PESSOAL</a></li>
+                <li><a href="Contato.html#form-contact">CONTATO</a></li>
             </ul>     
         </nav>
     </div>`;
@@ -46,4 +48,23 @@ function loadContentHeader(){
 
 function loadContentFooter(){
     document.getElementById("footer").innerHTML = "© 2021 - Italo Piovan - Intern Developer";
+}
+
+// -------------------- ENVIAR ------------------------
+
+function enviar(){
+    let nome  = document.getElementById("txtNome").value;
+    let email = document.getElementById("txtEmail").value;
+    let msg   = document.getElementById("txtMensagem").value;
+
+    if (nome == "")
+        alert("Favor preencher o campo NOME.");
+    else if (email == "")
+        alert("Favor preencher o campo EMAIL.");
+    else if (!email.includes("@") && !email.includes("."))
+        alert("Formato de EMAIL não válido.");
+    else if (msg == "")
+        alert("Favor preencher o campo MENSAGEM.");
+    else
+        alert("Mensagem enviada com sucesso.");
 }
