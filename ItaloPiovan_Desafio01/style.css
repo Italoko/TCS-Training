@@ -121,10 +121,36 @@ hr {
     opacity: 15%;
 }
 
+
+
 /*  Sessão pessoal */
 .sobre, .objetivos{
     height: 100vh;
-    display: inline-block;   
+    display: flex;   
+}
+
+@media (min-width: 360px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 360px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 320px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 320px;
+        display: inline-block;
+    }
+}
+
+@media (min-width: 280px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 320px;
+        display: inline-block;
+    }
 }
 
 .sobre, .objetivos, p{
