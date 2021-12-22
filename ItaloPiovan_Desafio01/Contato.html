@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,38 @@
     <title>PÁGINA PESSOAL - Contato</title>
 
     <script type="text/javascript" src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
     <div class="container">
         <header id="header">
             <!-- Carregado via JS -->
         </header>
-
-        <div class="content">
-            <div class="form-contact">
-                <h3>Vamos conversar, me envie uma mensagem ;)</h3>
-                <form>
-                    <input type="text" id="txtNome" placeholder="DIGITE SEU NOME"><br>
-                    <input type="email" id="txtEmail" placeholder="DIGITE SEU EMAIL"><br>
-                    <textarea type="textarea" id="txtMensagem"> MENSAGEM </textarea><br>
-                    <button type="submit" id="btnEnviar">ENVIAR</button>
-                </form> 
-            </div>
+        <div class="form-contact" id="form-contact">
+            <h3>Vamos conversar, me envie uma mensagem ;)</h3>
+            <form>
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" id="txtNome" placeholder="Digite seu nome" required>
+                </div>
+                <div>
+                    <label>E-mail:</label>
+                    <input type="email" id="txtEmail" placeholder="Digite seu e-mail" required>
+                </div>
+                <div>
+                    <label>Mensagem:</label>
+                    <textarea rows="6" id="txtMensagem" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+                <button type="button" id="btnEnviar" onclick="enviar()">Enviar</button>
+            </form>
         </div>
-        
         <footer id="footer">
             <!-- Carregado via JS -->
-         </footer>
+        </footer>
     </div>
 </body>
+
 </html>
 
 <script type="text/javascript">
