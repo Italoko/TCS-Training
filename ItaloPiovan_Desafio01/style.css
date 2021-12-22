@@ -124,8 +124,7 @@ hr {
 /*  Sessão pessoal */
 .sobre, .objetivos{
     height: 100vh;
-    display: flex;
-    flex-direction: row;
+    display: inline-block;   
 }
 
 .sobre, .objetivos, p{
