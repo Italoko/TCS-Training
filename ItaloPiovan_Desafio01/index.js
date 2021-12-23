@@ -52,6 +52,12 @@ function loadContentFooter(){
 
 // -------------------- ENVIAR ------------------------
 
+function clearScreen(){
+    document.getElementById("txtNome").value = "";
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("txtMensagem").value = "";
+}
+
 function enviar(){
     let nome  = document.getElementById("txtNome").value;
     let email = document.getElementById("txtEmail").value;
@@ -61,10 +67,12 @@ function enviar(){
         alert("Favor preencher o campo NOME.");
     else if (email == "")
         alert("Favor preencher o campo EMAIL.");
-    else if (!email.includes("@") && !email.includes("."))
+    else if (!email.includes("@") || !email.includes("."))
         alert("Formato de EMAIL não válido.");
     else if (msg == "")
         alert("Favor preencher o campo MENSAGEM.");
-    else
+    else{
+        clearScreen();
         alert("Mensagem enviada com sucesso.");
+    }  
 }
