@@ -121,56 +121,11 @@ hr {
     opacity: 15%;
 }
 
-
-
 /*  Sessão pessoal */
 .sobre, .objetivos{
     height: 100vh;
     display: flex;   
 }
-
-@media (max-width: 414px) {
-    .sobre, .objetivos {
-        height: 100vh;
-        max-width: 414px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 375px) {
-    .sobre, .objetivos {
-        height: 100vh;
-        max-width: 375px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 360px) {
-    .sobre, .objetivos {
-        height: 100vh;
-        max-width: 360px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 320px) {
-    .sobre, .objetivos {
-        height: 100vh;
-        max-width: 320px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 280px) {
-    .sobre, .objetivos {
-        height: 100vh;
-        max-width: 280px;
-        display: inline-block;
-    }
-}
-
-
-
 
 .sobre, .objetivos, p{
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -192,4 +147,82 @@ hr {
 
 .social-media > a:hover{
     color: #008744;
+}
+/* Mobiles */
+
+/* Pixel2, Pixel2 XL,iPhone 6,7,8 Plus*/
+/*Vertical*/
+@media (max-width: 414px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 414px;
+        display: inline-block;
+    }
+}
+
+/*Horizontal*/
+@media (max-width: 731px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width:731px;
+        display: inline-block;
+    }
+}
+
+/*Horizontal Pixel2 XL*/
+@media (max-width: 823px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width:823px;
+        display: inline-block;
+    }
+}
+
+/* iPhone 6,7,8,X*/
+/*Vertical*/
+@media (max-width: 375px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 375px;
+        display: inline-block;
+    }
+}
+
+/* Moto G4, Galaxy S5*/
+/*Vertical*/
+@media (max-width: 360px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 360px;
+        display: inline-block;
+    }
+}
+
+/*Horizontal*/
+@media (max-width: 640) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 640px;
+        display: inline-block;
+    }
+}
+
+/*iPhone 5/SE*/
+/*Vertical*/
+@media (max-width: 320px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 320px;
+        display: inline-block;
+    }
+}
+
+/*Galaxy Fold*/
+/*Vertical*/
+@media (max-width: 280px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 280px;
+        display: inline-block;
+    }
 }
