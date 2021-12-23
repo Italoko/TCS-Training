@@ -129,6 +129,22 @@ hr {
     display: flex;   
 }
 
+@media (max-width: 414px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 414px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 375px) {
+    .sobre, .objetivos {
+        height: 100vh;
+        max-width: 375px;
+        display: inline-block;
+    }
+}
+
 @media (max-width: 360px) {
     .sobre, .objetivos {
         height: 100vh;
@@ -152,6 +168,9 @@ hr {
         display: inline-block;
     }
 }
+
+
+
 
 .sobre, .objetivos, p{
     font-family: 'Helvetica', 'Arial', sans-serif;
