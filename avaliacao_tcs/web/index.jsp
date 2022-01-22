@@ -3,8 +3,9 @@
     Created on : 21/01/2022, 12:17:40
     Author     : ITALO PIOVAN
 --%>
-
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
