@@ -36,26 +36,27 @@ public class Conexao
         }catch (Exception e) {throw new RuntimeException("Erro ao abrir conexão: " + e.toString());}
     }
     
-    public void closeConnection(){
+    public void closeConnection()
+    {
         try{
             if(st != null && !st.isClosed())
                 st.close();
         } catch(Exception e){throw new RuntimeException("Erro ao fechar conexão: " + e.toString());}   
     }
     
-    public boolean getStateConnection(){
+    public boolean getStateConnection()
+    {
         try{
             if(st != null)
                 return !st.isClosed();
-        } catch(Exception e){throw new RuntimeException("Erro ao fechar conexão: " + e.toString());}
+        } catch(Exception e){throw new RuntimeException("Erro:" + e.toString());}
         return false;
     }
     
-    public boolean manipulate(String sql) // inserir, alterar, excluir
+    public boolean manipulate(String sql)
     {
         try {
-            boolean result = st.execute(sql);
-            return result;
+            return st.executeUpdate(sql) >= 1;
         }catch (SQLException sqlex) {throw new RuntimeException("Erro na manipulação: " + sqlex.toString());}
     }
 
@@ -64,7 +65,7 @@ public class Conexao
         ResultSet rs = null;
         try {
             rs = st.executeQuery(sql); 
-        } catch (SQLException sqlex) {throw new RuntimeException("Erro: " + sqlex.toString());}
+        } catch (SQLException sqlex) {throw new RuntimeException("Erro na consulta: " + sqlex.toString());}
         return rs;
     }
 }
