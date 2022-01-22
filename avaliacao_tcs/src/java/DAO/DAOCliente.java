@@ -21,8 +21,9 @@ public class DAOCliente
         return instance;
     }
     
-    public void insertCliente(Cliente cliente)
+    public boolean insertCliente(Cliente cliente)
     {
+        boolean success = false;
         String sql = "INSERT INTO tb_cliente (nome_cliente, email_cliente, telefone_cliente) VALUES ('@a', '@b', '@c')";
         
         sql = sql.replace("@a", cliente.getNome_cliente());
@@ -30,8 +31,9 @@ public class DAOCliente
         sql = sql.replace("@c", cliente.getTelefone_cliente());
         
         conn.openConnection();
-        conn.manipulate(sql);
+        success = conn.manipulate(sql);
         conn.closeConnection();
+        return success;
     }
     
     public boolean updateCliente(Cliente cliente)
