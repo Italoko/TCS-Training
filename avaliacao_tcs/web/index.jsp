@@ -17,11 +17,11 @@
         <div class="container">
             <nav class="box">
                 <ul>
-                    <li><a href="index.jsp"><button>HOME</button></a></li>
-                    <li><a href="novo_cliente.jsp"><button>NOVO CLIENTE</button></a></li>
-                    <li><a href="consultar_cliente.jsp"><button>CONSULTAR CLIENTE</button></a></li>
-                    <li><a href="novo_produto.jsp"><button>NOVO PRODUTO</button></a></li>
-                    <li><a href="consultar_produto.jsp"><button>CONSULTAR PRODUTO</button></a></li>
+                    <li><a href="."><button>HOME</button></a></li>
+                    <li><a href="View/novo_cliente.jsp"><button>NOVO CLIENTE</button></a></li>
+                    <li><a href="View/consultar_cliente.jsp"><button>CONSULTAR CLIENTE</button></a></li>
+                    <li><a href="View/novo_produto.jsp"><button>NOVO PRODUTO</button></a></li>
+                    <li><a href="View/consultar_produto.jsp"><button>CONSULTAR PRODUTO</button></a></li>
                 </ul>     
             </nav>
         </div>

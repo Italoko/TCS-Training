@@ -7,11 +7,11 @@
 
 *{
     font-family: 'Fjalla One', sans-serif;
-    color: #1B1C1D;
-    background: #ffff;
 }
 
 body{
+    color: #1B1C1D;
+    background: #ffff;
     height: 100%;
     width: 100%;
 }

@@ -1,0 +1,40 @@
+/* 
+    Author     : ITALO PIOVAN
+*/
+
+table {
+  border-collapse: collapse;
+  width: 50em;
+  border: 1px solid #666;
+}
+
+thead {
+  background-color: #666666;
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+tr:hover {
+  background-color:#3d80df;
+  color: #fff;
+}
+
+thead tr:hover {
+  background-color: transparent;
+  color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: #a5a5a5;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.1em 1em;
+}
+
+
