@@ -9,22 +9,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="Style/style.css" rel="stylesheet" type="text/css"/>
-        <link href="Style/form.css" rel="stylesheet" type="text/css"/>
+        <link href="../Style/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../Style/form.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
         <title>Novo Cliente</title>
     </head>
     <body>
         <header>
             <div class="back-home">
-                <a href = "index.jsp" alt="Voltar para home"><i class="fas fa-backward"></i></a>
+                <a href = "../index.jsp" alt="Voltar para home"><i class="fas fa-backward"></i></a>
             </div>
             
             <h1>Novo Cliente</h1>
         </header>
         <div class="container">
             <div class="form">
-                <form action="inserir_cliente.jsp" method="post">
+                <form action="../util/inserir_cliente.jsp" method="post">
                     <div>
                         <label>Nome do cliente:</label>
                         <input type="text" name="txtNome" placeholder="Digite o nome do cliente" required>
