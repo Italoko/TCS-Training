@@ -102,4 +102,21 @@ public class DAOCliente
         }catch(Exception e){throw new RuntimeException("Erro ao listar clientes" + e);}
         return clientes;
     }
+    
+    public Cliente getClienteById(int id)
+    {
+        Cliente cliente = null;
+        try{
+            String sql = "SELECT * FROM tb_cliente WHERE id_cliente = "+id;
+            
+            conn.openConnection();
+            ResultSet rs = conn.query(sql);
+            
+            if(rs != null && rs.next())
+                cliente = new Cliente(rs.getInt("id_cliente"), rs.getString("nome_cliente"),rs.getString("email_cliente"), rs.getString("telefone_cliente"));
+            
+            conn.closeConnection();
+        }catch(Exception e){throw new RuntimeException("Erro ao listar cliente pelo id" + e);}
+        return cliente;
+    }
 }

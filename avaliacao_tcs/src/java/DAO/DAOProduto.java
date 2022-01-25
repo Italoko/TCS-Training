@@ -100,4 +100,21 @@ public class DAOProduto
         }catch(Exception e){throw new RuntimeException("Erro ao listar produtos" + e);}
         return produtos;
     }
+    
+    public Produto getClienteById(int id)
+    {
+        Produto produto = null;
+        try{
+            String sql = "SELECT * FROM tb_produto WHERE id_produto = "+id;
+            
+            conn.openConnection();
+            ResultSet rs = conn.query(sql);
+            
+            if(rs != null && rs.next())
+                produto = new Produto(rs.getInt("id_produto"), rs.getString("nome_produto"), rs.getInt("qtd_produto"));
+            
+            conn.closeConnection();
+        }catch(Exception e){throw new RuntimeException("Erro ao listar produto pelo id" + e);}
+        return produto;
+    }
 }
