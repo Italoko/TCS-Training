@@ -67,8 +67,8 @@
                             out.print("<td>"+ cli.getEmail_cliente() +"</td>");
                             out.print("<td>"+ cli.getTelefone_cliente() +"</td>");
                             
-                            out.print("<td>"+ "Alterar" +"</td>");
-                            out.print("<td>"+ "Apagar " +"</td>");
+                            out.print("<td> <a href = 'edit_cliente.jsp?id="+ cli.getId_cliente()+ "'> <i class='fas fa-user-edit'></i> <a/> </td>");
+                            out.print("<td> <a href = '../util/excluir_cliente.jsp?id="+ cli.getId_cliente()+ "'> <i class='fas fa-user-minus'></i> <a/> </td>");
                         out.print("</tr>");    
                     }
                     out.print("</tbody>");     
