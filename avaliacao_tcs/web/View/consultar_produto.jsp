@@ -65,8 +65,8 @@
                             out.print("<td>"+ prod.getNome_produto() +"</td>");
                             out.print("<td>"+ prod.getQtd_produto()+"</td>");
                            
-                            out.print("<td>"+ "Alterar" +"</td>");
-                            out.print("<td>"+ "Apagar " +"</td>");
+                            out.print("<td> <a href = 'edit_produto.jsp?id="+ prod.getId_produto()+ "'> <i class='far fa-edit'></i> </td>");
+                            out.print("<td> <a href = '../util/excluir_produto.jsp?id="+ prod.getId_produto()+ "'> <i class='far fa-trash-alt'></i> </td>");
                         out.print("</tr>");    
                     }
                     out.print("</tbody>");     
