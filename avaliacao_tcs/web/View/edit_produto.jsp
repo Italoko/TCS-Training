@@ -9,7 +9,7 @@
 
 <%
     DAOProduto prodDAO = DAOProduto.getInstance();
-    Produto produto = prodDAO.getClienteById(Integer.parseInt(request.getParameter("id")));
+    Produto produto = prodDAO.getProdutoById(Integer.parseInt(request.getParameter("id")));
     
     if(produto == null)
         out.print("<script type='text/javascript'> alert('Produto não identificado'); window.location.href = './consultar_produto.jsp' </script>");
