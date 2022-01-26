@@ -29,8 +29,11 @@
             <nav style="margin: 10px;">
                 <form action="./consultar_produto.jsp" method="post">
                     <label>Buscar: </label>
-                    <input style="width: 50%" name="q_nome" type="search">
+                    <input style="width: 40%" name="q_nome" type="search">
                     <input type="submit" value="Pesquisar"></input>
+  
+                    <label>Qtd Min:</label><input type="radio"  name="radio_order_min" value="MIN">
+                    <label>Qtd Max:</label><input type="radio"  name="radio_order_max" value="MAX">
                 </form>
             </nav> 
         </header>
@@ -54,11 +57,20 @@
                     DAOProduto prodDAO = DAOProduto.getInstance();
                     ArrayList<Produto> produtos = new ArrayList<Produto>();
                     
-                    if(request.getParameter("q_nome") == null || request.getParameter("q_nome").isEmpty())
-                        produtos = prodDAO.getProdutos();
-                    else
-                        produtos = prodDAO.getProdutosFilter(request.getParameter("q_nome"));
+                    String order = "";
+                    String min = request.getParameter("radio_order_min");
+                    String max  = request.getParameter("radio_order_max");
                     
+                    if(min != null)
+                        order = min;
+                    else
+                        order = max;
+
+                    if(request.getParameter("q_nome") == null || request.getParameter("q_nome").isEmpty())
+                        produtos = prodDAO.getProdutos(order);
+                    else
+                        produtos = prodDAO.getProdutosFilter(request.getParameter("q_nome"),order);
+
                     for (Produto prod : produtos){
                         out.print("<tr>");
                             out.print("<td>"+ prod.getId_produto() +"</td>");

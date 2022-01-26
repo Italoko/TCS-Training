@@ -65,11 +65,22 @@ public class DAOProduto
         return success;
     }
     
-    public ArrayList<Produto> getProdutos()
+    public ArrayList<Produto> getProdutos(String order)
     {
         ArrayList<Produto> produtos = new ArrayList<Produto>();
         try{
             String sql = "SELECT * FROM tb_produto";
+            
+            if(order!= null && !order.isEmpty())
+               switch(order)
+               {
+                   case "MAX":
+                       sql = sql + " ORDER BY qtd_produto DESC";
+                       break;
+                    case "MIN":
+                        sql = sql + " ORDER BY qtd_produto ASC";
+                        break;
+               }
             
             conn.openConnection();
             ResultSet rs = conn.query(sql);
@@ -83,11 +94,22 @@ public class DAOProduto
         return produtos;
     }
     
-    public ArrayList<Produto> getProdutosFilter(String nome)
+    public ArrayList<Produto> getProdutosFilter(String nome, String order)
     {
         ArrayList<Produto> produtos = new ArrayList<Produto>();
         try{
             String sql = "SELECT * FROM tb_produto WHERE nome_produto LIKE '%" +nome+ "%'";
+            
+            if(order!= null && !order.isEmpty())
+               switch(order)
+               {
+                   case "MAX":
+                       sql = sql + " ORDER BY qtd_produto DESC";
+                       break;
+                    case "MIN":
+                        sql = sql + " ORDER BY qtd_produto ASC";
+                        break;
+               }
             
             conn.openConnection();
             ResultSet rs = conn.query(sql);
@@ -101,7 +123,7 @@ public class DAOProduto
         return produtos;
     }
     
-    public Produto getClienteById(int id)
+    public Produto getProdutoById(int id)
     {
         Produto produto = null;
         try{
