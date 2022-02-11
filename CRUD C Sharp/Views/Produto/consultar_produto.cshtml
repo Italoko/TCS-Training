@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "consultar_produto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <nav style="margin: 10px;">
+        <form>
+            <label>Buscar: </label>
+            <input style="width: 50%" name="q_nome" type="search">
+            <input type="submit" value="Pesquisar"></input>
+        </form>
+    </nav>
+</header>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID.</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Alter</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_prod">
+            @* Conteúdo carregado via ajax *@
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        produto.obterProdutos();
+    });
+</script>
+
+@section javascript {
+    <script src="~/js/Produto.js"></script>
+}

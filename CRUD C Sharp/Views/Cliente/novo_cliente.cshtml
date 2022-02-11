@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "novo_cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="form">
+        <form>
+            <div>
+                <label>Nome do cliente:</label>
+                <input type="text" id="txtNome" placeholder="Digite o nome do cliente" required>
+            </div>
+            <div>
+                <label>E-mail:</label>
+                <input type="email" id="txtEmail" placeholder="Digite email do cliente" required>
+            </div>
+            <div>
+                <label>Telefone:</label>
+                <input type="tel" id="txtTelefone" placeholder="Digite telefone do cliente" required>
+            </div>
+
+            <input type="submit" value="Gravar" onclick="cliente.inserir()" />
+        </form>
+    </div>
+</div>
+
+@section javascript {
+    <script src="~/js/Cliente.js"></script>
+}

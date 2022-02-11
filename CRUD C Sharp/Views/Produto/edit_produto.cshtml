@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "novo_produto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="form">
+        <form>
+            <div>
+                <label>Produto ID.</label>
+                <input type="number" id="txtID" value="@ViewBag.id" readonly>
+            </div>
+
+            <div>
+                <label>Nome do produto:</label>
+                <input type="text" id="txtNome" placeholder="Digite o nome do produto" required>
+            </div>
+
+            <div>
+                <label>Quantidade:</label>
+                <input type="number" id="txtQtd" min="0" required>
+            </div>
+            <input type="submit" value="Gravar" onclick="produto.editar()" />
+        </form>
+    </div>
+</div>
+
+@section javascript {
+    <script src="~/js/Produto.js"></script>
+}

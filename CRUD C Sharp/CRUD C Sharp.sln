@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD C Sharp", "CRUD C Sharp.csproj", "{B89D7005-C326-429F-AEEE-508B5521AD68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD C SharpTests", "..\CRUD C SharpTests\CRUD C SharpTests.csproj", "{C5E9D012-108E-4213-B5A6-D1639863BA54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B89D7005-C326-429F-AEEE-508B5521AD68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89D7005-C326-429F-AEEE-508B5521AD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89D7005-C326-429F-AEEE-508B5521AD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89D7005-C326-429F-AEEE-508B5521AD68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E9D012-108E-4213-B5A6-D1639863BA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E9D012-108E-4213-B5A6-D1639863BA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E9D012-108E-4213-B5A6-D1639863BA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E9D012-108E-4213-B5A6-D1639863BA54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C32078B-6E02-42B5-B601-B81B8122BF7E}
+	EndGlobalSection
+EndGlobal

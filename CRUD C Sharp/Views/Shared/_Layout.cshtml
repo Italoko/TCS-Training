@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CRUD_C_Sharp</title>
+
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/form.css" />
+    <link rel="stylesheet" href="~/css/table.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+<body>
+    <header>
+        <h1>PETSHOP</h1>
+        <div class="back-home">
+            <a href="/Home"><i class="fas fa-backward"></i></a>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="border-top footer text-muted">
+        <h4> &copy; 2022 - Italo Piovan - Intern Developer</h4>
+    </footer>
+    <script src="~/lib/HTTPClient.js"></script>
+    @RenderSection("javascript", false);
+</body>
+</html>

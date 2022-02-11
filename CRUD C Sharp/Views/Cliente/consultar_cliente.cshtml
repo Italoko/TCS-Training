@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "consultar_cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header>
+    <nav style="margin: 10px;">
+        <form>
+            <label>Buscar: </label>
+            <input style="width: 50%" id="q_nome" type="search">
+            <input type="submit" value="Pesquisar" onclick="cliente.obterClientes(document.getElementById('q_nome'))" />
+        </form>
+    </nav>
+</header>
+ 
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID.</th>
+                <th>Cliente</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Alter</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_cli">
+            @* Conteúdo carregado via ajax *@
+        </tbody>
+    </table>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        cliente.obterClientes("");
+    });
+</script>
+
+@section javascript {
+    <script src="~/js/Cliente.js"></script>
+}
