@@ -399,3 +399,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+CRUD C Sharp/CRUD C SharpTests/CRUD C SharpTests.csproj
+CRUD C Sharp/CRUD C SharpTests/Testes.cs
